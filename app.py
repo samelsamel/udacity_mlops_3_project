@@ -1,3 +1,14 @@
+"""
+Author: Amel Sellami 
+Date creation: 27-04-2022
+
+The app runs the differnet moethods: 
+- scoring
+- stats
+- prediction
+- dignosis
+
+"""
 from flask import Flask, session, jsonify, request
 import pandas as pd
 import numpy as np
@@ -49,4 +60,4 @@ def diagnostics():
     return  str("execution time: " + time + "missing data: " + missing +  "package list: " + outdated) #add return value for all diagnostics
 
 if __name__ == "__main__":    
-    app.run(host='0.0.0.0', port=8000, debug=True, threaded=True)
+    app.run(host='0.0.0.0', port=9000, debug=True, threaded=True)
